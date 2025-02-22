@@ -2,7 +2,6 @@ import "./globals.css";
 
 import { TemplateStoreProvider } from "@/providers/template-store-provider";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
@@ -15,7 +14,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Toaster } from "@/components/ui/sonner";
-import PlausibleProvider from "next-plausible";
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://og.indiehub.best"),
@@ -53,18 +51,6 @@ export default async function RootLayout({
 			suppressHydrationWarning
 		>
 			<body className="min-h-screen bg-background font-sans antialiased">
-				<PlausibleProvider
-					domain="og.indiehub.best"
-					// https://github.com/4lejandrito/next-plausible/blob/master/test/page/pages/customDomain.js
-					customDomain="https://pa.indieapp.site"
-					selfHosted={true}
-					trackOutboundLinks={true}
-					trackLocalhost={false}
-					taggedEvents={true}
-					hash={true}
-					// https://github.com/4lejandrito/next-plausible/blob/master/test/page/pages/revenue.js
-					revenue={false}
-				>
 					<ThemeProvider
 						attribute="class"
 						defaultTheme="system"
@@ -194,10 +180,6 @@ export default async function RootLayout({
 					</ThemeProvider>
 
 					<Toaster />
-
-					<SpeedInsights />
-					<Analytics />
-				</PlausibleProvider>
 			</body>
 		</html>
 	);

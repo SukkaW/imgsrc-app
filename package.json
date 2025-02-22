@@ -28,7 +28,6 @@
     "@radix-ui/react-tabs": "^1.1.2",
     "@resvg/resvg-wasm": "^2.6.2",
     "@vercel/analytics": "^1.4.1",
-    "@vercel/speed-insights": "^1.1.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "embla-carousel-react": "8.5.1",
@@ -69,6 +68,10 @@
     "overrides": {
       "@types/react": "19.0.2",
       "@types/react-dom": "19.0.2"
-    }
-  }
+    },
+    "onlyBuiltDependencies": [
+      "sharp"
+    ]
+  },
+  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af"
 }
