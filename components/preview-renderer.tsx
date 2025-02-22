@@ -34,7 +34,6 @@ export default function PreviewRenderer() {
         <TemplateComp
           // @ts-ignore
           template={template}
-          renderWatermark
         />,
         {
           // debug: process.env.NODE_ENV === "development",

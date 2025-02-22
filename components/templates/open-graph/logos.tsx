@@ -62,7 +62,7 @@ export const Template = ({
         flexDirection: "column",
         alignItems: "center",
 
-        rowGap: "0.5rem",
+        gap: "0.5rem",
       }}
     >
       {template.params.tag.text && (
@@ -129,14 +129,5 @@ export const Template = ({
           )
       )}
     </div>
-
-    {renderWatermark && (
-      <Watermark
-        style={{
-          bottom: "2rem",
-          right: "2rem",
-        }}
-      />
-    )}
   </div>
 )

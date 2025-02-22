@@ -62,6 +62,10 @@ export default function SaveImageButton() {
           try {
             setGeneratingPng(true)
             setFileName(`og-${Date.now()}.png`)
+            console.log({
+              previewSvg,
+              width: canvas.width
+            })
             const pngDownloadUrl = await renderPNG?.({
               svg: previewSvg,
               width: canvas.width,

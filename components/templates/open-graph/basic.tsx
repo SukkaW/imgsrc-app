@@ -108,14 +108,5 @@ export const Template = ({
         )}
       </div>
     </div>
-
-    {renderWatermark && (
-      <Watermark
-        style={{
-          bottom: "2rem",
-          right: "2rem",
-        }}
-      />
-    )}
   </div>
 )
